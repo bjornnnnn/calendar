@@ -33,73 +33,83 @@ const monthnames = [
 const dinghies = ["C55", "Tera", "Feva", "Laser", "E-jolle", "Finnjolle"]
 
 const events = [
-    {dayOfYear: 82, name: "Kölbåt: Förrådsinventering", scope: "Club", boats:["Kölbåt"]},
-    {dayOfYear: 83, name: "NSS: Årsmöte", scope: "Club", boats:["Kölbåt"]},
-    {dayOfYear: 89, name: "Jolle: Uppstartsmöte VT 2026", scope: "Jolle", boats: dinghies},
-    {dayOfYear: 109, name: "Jolle: Vårbåtsfix", scope: "Jolle", boats: dinghies},
-    {dayOfYear: 120, name: "NSS: H-båtsläger dag 1", scope: "Club", boats:["H-båt"]},
-    {dayOfYear: 121, name: "NSS: H-båtsläger dag 2", scope: "Club", boats:["H-båt"]},
-    {dayOfYear: 122, name: "NSS: H-båtsläger dag 3", scope: "Club", boats:["H-båt"]},
-    {dayOfYear: 123, name: "NSS: H-båtsläger dag 4", scope: "Club", boats:["H-båt"]},
-    {dayOfYear: 125, name: "Jolle: Teknikträning (prel)", scope: "Club", boats:dinghies},
-    {dayOfYear: 132, name: "Jolle: Teknikträning (prel)", scope: "Club", boats:dinghies},
-    {dayOfYear: 139, name: "Jolle: Teknikträning (prel)", scope: "Club", boats:dinghies},
-    {dayOfYear: 146, name: "Jolle: Teknikträning (prel)", scope: "Club", boats:dinghies},
-    {dayOfYear: 143, name: "NSS: Seglingens Dag i Hamnen", scope: "Club", boats:dinghies},
-    {dayOfYear: 144, name: "Dalarö SS: Icebreaker C55-sprint", scope: "Regional", boats:["C55"]},
+    {dayOfYear: 82, name: "Tävling: Förrådsinventering", scope: "Club", boats:["Kölbåt"], label:"nssEvent"},
+    {dayOfYear: 83, name: "NSS: Årsmöte", scope: "Club", boats:["Kölbåt"], label:"nssEvent"},
+    {dayOfYear: 89, name: "Jolle: Uppstartsmöte VT 2026", scope: "Jolle", boats: dinghies, label:"nssEvent"},
+    {dayOfYear: 109, name: "Jolle: Vårbåtsfix", scope: "Jolle", boats: dinghies, label:"nssEvent"},
+    {dayOfYear: 120, name: "Kölbåt: H-båtsläger dag 1", scope: "Club", boats:["H-båt"], label:"nssEvent"},
+    {dayOfYear: 121, name: "Kölbåt: H-båtsläger dag 2", scope: "Club", boats:["H-båt"], label:"nssEvent"},
+    {dayOfYear: 122, name: "Kölbåt: H-båtsläger dag 3", scope: "Club", boats:["H-båt"], label:"nssEvent"},
+    {dayOfYear: 123, name: "Kölbåt: H-båtsläger dag 4", scope: "Club", boats:["H-båt"], label:"nssEvent"},
+    {dayOfYear: 125, name: "Jolle: Teknikträning (prel)", scope: "Club", boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 132, name: "Jolle: Teknikträning (prel)", scope: "Club", boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 139, name: "Jolle: Teknikträning (prel)", scope: "Club", boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 146, name: "Jolle: Teknikträning (prel)", scope: "Club", boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 143, name: "NSS: Seglingens Dag i Hamnen", scope: "Club", boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 144, name: "Dalarö SS: Icebreaker C55-sprint", scope: "Regional", boats:["C55"], label:"externalEvent"},
     
-    {dayOfYear: 166, name: "Jolle: Ledarläger dag 1", scope: "Jolle", boats:dinghies},
-    {dayOfYear: 167, name: "Jolle: Ledarläger dag 2", scope: "Jolle", boats:dinghies},
-    {dayOfYear: 168, name: "Jolle: Ledarläger dag 3", scope: "Jolle", boats:dinghies},
-    {dayOfYear: 170, name: "Midsommarafton", scope: "publicholiday", boats:dinghies},
-    {dayOfYear: 173, name: "Seglarläger 1, dag 1", scope: "Jolle", boats:dinghies},
-    {dayOfYear: 174, name: "Seglarläger 1, dag 2", scope: "Jolle", boats:dinghies},
-    {dayOfYear: 175, name: "Seglarläger 1, dag 3", scope: "Jolle", boats:dinghies},
-    {dayOfYear: 176, name: "Seglarläger 1, dag 4", scope: "Jolle", boats:dinghies},
-    {dayOfYear: 177, name: "Seglarläger 1, dag 5", scope: "Jolle", boats:dinghies},
-    {dayOfYear: 180, name: "Seglarläger 2, dag 1", scope: "Jolle", boats:dinghies},
-    {dayOfYear: 181, name: "Seglarläger 2, dag 2", scope: "Jolle", boats:dinghies},
-    {dayOfYear: 182, name: "Seglarläger 2, dag 3", scope: "Jolle", boats:dinghies},
+    {dayOfYear: 129, name: "Upsala SS: Frog Ocean Sprint Race, dag 1", scope: "Regional", boats: ["Feva"], label:"externalEvent"},
+    {dayOfYear: 130, name: "Upsala SS: Frog Ocean Sprint Race, dag 2", scope: "Regional", boats: ["Feva"], label:"externalEvent"},
+    {dayOfYear: 134, name: "Vigbyholm SS: Gullviverallyt, dag 1", scope: "Regional", boats: ["Kölbåt SRS"], label:"externalEvent"},
+    {dayOfYear: 135, name: "Vigbyholm SS: Gullviverallyt, dag 2", scope: "Regional", boats: ["Kölbåt SRS"], label:"externalEvent"},
+    {dayOfYear: 136, name: "Vigbyholm SS: Gullviverallyt, dag 3", scope: "Regional", boats: ["Kölbåt SRS"], label:"externalEvent"},
+    {dayOfYear: 137, name: "Vigbyholm SS: Gullviverallyt, dag 4", scope: "Regional", boats: ["Kölbåt SRS"], label:"externalEvent"},
+    {dayOfYear: 150, name: "Tyresö BK: Ornö Runt", scope: "Regional", boats: ["Kölbåt SRS"], label:"externalEvent"},
 
-    {dayOfYear: 155, name: "Jolle: Bankappsegling 1 (prel)", scope: "Club", boats:dinghies},
-    {dayOfYear: 162, name: "Jolle: Bankappsegling 2 (prel)", scope: "Club", boats:dinghies},
-    {dayOfYear: 169, name: "Jolle: Banskappegling 3 (prel)", scope: "Club", boats:dinghies},
 
-    {dayOfYear: 218, name: "Jolle: Jollecupen 2026 1 (prel)", scope: "Club", boats:dinghies},
-    {dayOfYear: 225, name: "Jolle: Jollecupen 2026 2 (prel)", scope: "Club", boats:dinghies},
-    {dayOfYear: 232, name: "Jolle: Jollecupen 2026 3 (prel)", scope: "Club", boats:dinghies},
+    {dayOfYear: 166, name: "Jolle: Ledarläger dag 1", scope: "Jolle",         boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 167, name: "Jolle: Ledarläger dag 2", scope: "Jolle",         boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 168, name: "Jolle: Ledarläger dag 3", scope: "Jolle",         boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 170, name: "Midsommarafton",          scope: "publicholiday", boats:dinghies, label:"externalEvent"},
+    {dayOfYear: 173, name: "Seglarläger 1, dag 1",    scope: "Jolle",         boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 174, name: "Seglarläger 1, dag 2",    scope: "Jolle",         boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 175, name: "Seglarläger 1, dag 3",    scope: "Jolle",         boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 176, name: "Seglarläger 1, dag 4",    scope: "Jolle",         boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 177, name: "Seglarläger 1, dag 5",    scope: "Jolle",         boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 180, name: "Seglarläger 2, dag 1",    scope: "Jolle",         boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 181, name: "Seglarläger 2, dag 2",    scope: "Jolle",         boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 182, name: "Seglarläger 2, dag 3",    scope: "Jolle",         boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 183, name: "Seglarläger 2, dag 4",    scope: "Jolle",         boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 184, name: "Seglarläger 2, dag 5",    scope: "Jolle",         boats:dinghies, label:"nssEvent"},
 
-    {dayOfYear: 154, name: "Kölbåt: onsdagssegling 1 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 161, name: "Kölbåt: onsdagssegling 2 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 168, name: "Kölbåt: onsdagssegling 3 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 175, name: "Kölbåt: onsdagssegling 4 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 182, name: "Kölbåt: onsdagssegling 5 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 189, name: "Kölbåt: onsdagssegling 6 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 196, name: "Kölbåt: onsdagssegling 7 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 203, name: "Kölbåt: onsdagssegling 8 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 210, name: "Kölbåt: onsdagssegling 9 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 217, name: "Kölbåt: onsdagssegling 10 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 224, name: "Kölbåt: onsdagssegling 11 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 231, name: "Kölbåt: onsdagssegling 12 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 238, name: "Kölbåt: onsdagssegling 13 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 245, name: "Kölbåt: onsdagssegling 14 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 252, name: "Kölbåt: onsdagssegling 15 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 259, name: "Kölbåt: onsdagssegling 16 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
-    {dayOfYear: 266, name: "Kölbåt: onsdagssegling 17 (prel) - Säsongsavslutning", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"]},
+    {dayOfYear: 155, name: "Jolle: Bankappsegling 1 (prel)", scope: "Club",  boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 162, name: "Jolle: Bankappsegling 2 (prel)", scope: "Club",  boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 169, name: "Jolle: Banskappegling 3 (prel)", scope: "Club",  boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 218, name: "Jolle: Jollecupen 2026 1 (prel)", scope: "Club", boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 225, name: "Jolle: Jollecupen 2026 2 (prel)", scope: "Club", boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 232, name: "Jolle: Jollecupen 2026 3 (prel)", scope: "Club", boats:dinghies, label:"nssEvent"},
+
+    {dayOfYear: 154, name: "Kölbåt: onsdagssegling 1 (prel)",  scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 161, name: "Kölbåt: onsdagssegling 2 (prel)",  scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 168, name: "Kölbåt: onsdagssegling 3 (prel)",  scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 175, name: "Kölbåt: onsdagssegling 4 (prel)",  scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 182, name: "Kölbåt: onsdagssegling 5 (prel)",  scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 189, name: "Kölbåt: onsdagssegling 6 (prel)",  scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 196, name: "Kölbåt: onsdagssegling 7 (prel)",  scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 203, name: "Kölbåt: onsdagssegling 8 (prel)",  scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 210, name: "Kölbåt: onsdagssegling 9 (prel)",  scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 217, name: "Kölbåt: onsdagssegling 10 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 224, name: "Kölbåt: onsdagssegling 11 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 231, name: "Kölbåt: onsdagssegling 12 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 238, name: "Kölbåt: onsdagssegling 13 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 245, name: "Kölbåt: onsdagssegling 14 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 252, name: "Kölbåt: onsdagssegling 15 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 259, name: "Kölbåt: onsdagssegling 16 (prel)", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
+    {dayOfYear: 266, name: "Kölbåt: onsdagssegling 17 (prel) - Säsongsavslutning", scope: "Club", boats:["Kölbåt SRS", "Jolle SRS"], label:"nssEvent"},
     
 
-    {dayOfYear: 226, name: "NSS: SM Smaragd, SM A22, KM M30 Dag 1", scope: "National", boats:["Smaragd", "A22", "M30"]},
-    {dayOfYear: 227, name: "NSS: SM Smaragd, SM A22, KM M30 Dag 2", scope: "National", boats:["Smaragd", "A22", "M30"]},
-    {dayOfYear: 228, name: "NSS: SM Smaragd, SM A22, KM M30 Dag 3", scope: "National", boats:["Smaragd", "A22", "M30"]},
+    {dayOfYear: 226, name: "Tävling: SM Smaragd, SM A22, KM M30 Dag 1", scope: "National", boats:["Smaragd", "A22", "M30"], label:"nssEvent"},
+    {dayOfYear: 227, name: "Tävling: SM Smaragd, SM A22, KM M30 Dag 2", scope: "National", boats:["Smaragd", "A22", "M30"], label:"nssEvent"},
+    {dayOfYear: 228, name: "Tävling: SM Smaragd, SM A22, KM M30 Dag 3", scope: "National", boats:["Smaragd", "A22", "M30"], label:"nssEvent"},
     
 
-    {dayOfYear: 241, name: "NSS: Bedarön Runt (alt 1)", scope: "National", boats:["Feva"]},
-    {dayOfYear: 242, name: "NSS: Bedarön Runt (alt 2)", scope: "National", boats:["Feva"]},
+    {dayOfYear: 241, name: "Tävling: Bedarön Runt (alt 1)", scope: "Regional", boats:dinghies, label:"nssEvent"},
+    {dayOfYear: 242, name: "Tävling: Bedarön Runt (alt 2)", scope: "Regional", boats:dinghies, label:"nssEvent"},
 
-    {dayOfYear: 248, name: "NSS: Viper Ocean Sprint Race, Dag 1", scope: "National", boats:["Feva"]},
-    {dayOfYear: 249, name: "NSS: Viper Ocean Sprint Race, Dag 2", scope: "National", boats:["Feva"]},
+    {dayOfYear: 248, name: "Tävling: Viper Ocean Sprint Race, Dag 1", scope: "National", boats:["Feva"], label:"nssEvent"},
+    {dayOfYear: 249, name: "Tävling: Viper Ocean Sprint Race, Dag 2", scope: "National", boats:["Feva"], label:"nssEvent"},
 
-    {dayOfYear: 281, name: "Jolle: Vinterfix Jolle - säsongsavslutning", scope: "Jolle", boats:dinghies},
+    {dayOfYear: 281, name: "Jolle: Vinterfix Jolle - säsongsavslutning", scope: "Jolle", boats:dinghies, label:"nssEvent"},
 
 ]
 
@@ -133,8 +143,22 @@ function generateDay(yeardata, eventData,  dayNumber){
 function makeDayBrick(dObj){
     let sp = document.createElement("span")
     sp.classList.add("calday")
+    if (dObj.dayOfWeek == 0){
+        sp.classList.add("firstOfWeek")
+    }
     if (dObj.day == 1){
         sp.classList.add("firstOfMonth")
+        let a = document.createElement("a")
+        let mname = monthnames[dObj.month]
+        a.setAttribute("id", "a_" + mname)
+        sp.appendChild(a)
+        let mnav = document.getElementById("monthsnav")
+        let a2 = document.createElement("a")
+        a2.setAttribute("href", "#a_" + mname)
+        a2.innerHTML = `${mname.substring(0,3)}`
+        a2.classList.add("monthNavMonth")
+
+        mnav.appendChild(a2)
     }
     sp.id = dObj.dayOfYear
     
@@ -158,13 +182,18 @@ function makeDayBrick(dObj){
     daySp.innerHTML = weekdaynames[dObj.dayOfWeek]
     sp.appendChild(daySp)
 
+    let eventsSpan = document.createElement("span")
+    eventsSpan.classList.add("eventlist")
+
+
     for (var ev of dObj.events){
         let evsp = document.createElement("span")
         evsp.innerHTML = ev.name
         evsp.classList.add('event')
-        sp.appendChild(evsp)
+        evsp.classList.add(ev.label)
+        eventsSpan.appendChild(evsp)
     }
-    
+    sp.appendChild(eventsSpan)
     return sp
 }
 
