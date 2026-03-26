@@ -48,6 +48,8 @@
             flex-direction: row-reverse;
             font-size: smaller;
             color: #DDDDDD;
+            left: 7px;
+            position: absolute;
         }
 
         .doy:hover {
@@ -65,7 +67,7 @@
             width: 100px;
         }
 
-        .firstOfWeek{
+        .firstOfWeek {
             border-top: 2px dotted #CCCCCC;
         }
 
@@ -84,7 +86,8 @@
         .month {
             display: flex;
             padding: 5px;
-            width: 80px;
+            /*width: 80px;*/
+            min-width: 50px;
             flex-direction: row-reverse;
         }
 
@@ -93,7 +96,7 @@
             border: 1px solid #CCCCCC;
             background-color: #DDDDDD;
             padding: 5px;
-            width: 200px;
+            min-width: 75px;
             border-radius: 5px;
         }
 
@@ -123,8 +126,21 @@
         }
 
         .monthNavMonth:hover {
-            
+
             border-bottom: 2px solid #999999;
+        }
+
+        .weeknumber {
+            display: flex;
+            background-color: #EEEEEE;
+            position: absolute;
+            border: 1px solid #AAAAAA;
+            height: 10px;
+            border-radius: 10px;
+            margin-top: -13px;
+            left: 7px;
+            font-size: x-small;
+            padding: 3px;
         }
     </style>
 </head>
