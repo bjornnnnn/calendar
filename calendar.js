@@ -60,7 +60,7 @@ const seriesbase = {
 }
 
 const users = {
-    "eskz": { name: "Eskil Z",     mobile: "070-1234568",  email: "abc@nhss.se",     roles: ["Tävlingsledare", "Seglingsledare", "Kappseglingsfunktionär"] },
+    "eskz": { name: "Eskil Z",     mobile: "070-1234568",  email: "z.eskil@gmail.com",     roles: ["Tävlingsledare", "Seglingsledare", "Kappseglingsfunktionär"] },
     "alvz": { name: "Alva Z",      mobile: "070-1234568",  email: "abc@nhss.se",     roles: ["Tränare", "Deltagare", "Kappseglingsfunktionär"] },
     "nilz": { name: "Nils Z",      mobile: "070-1234568",  email: "abc@nhss.se",     roles: ["Tränare", "Deltagare"] },
     "andh": { name: "Andreas H",   mobile: "070-1234568",  email: "abc@nhss.se",     roles: ["Tränare", "Kappseglingsfunktionär"] },
@@ -96,17 +96,19 @@ let events = [
     { dayOfYear:  82, name: "Tävling: Förrådsinventering", scope: "Club", boats: ["Kölbåt"], label: "nssEvent", where: geosites["nyn_nhss_jollebod"], when: "17:00 - 18:00", what: "Tävlingskommitén går igenom inventarier i tävlingsboden inför vårens säsong.", responsible: users.johh },
     { dayOfYear:  83, name: "NSS: Årsmöte", scope: "Club", boats: ["Kölbåt"], label: "nssEvent", where: geosites.nyn_nhss_klubbhus, when: "19:00 - 20:00", what: "NSS årsmöte.", responsible: users.ordf },
     { dayOfYear:  90, name: "Jolle: Uppstartsmöte VT 2026", scope: "Jolle", boats: dinghies, label: "nssEvent", where: geosites.nyn_nhss_klubbhus, when: "19:00 - 20:30", what: "Planeringsmöte för jolle 2026", responsible: users.eskz },
-    { dayOfYear: 109, name: "Jolle: Vårbåtsfix", scope: "Jolle", boats: dinghies, label: "nssEvent", where: geosites.nyn_nhss_jollebod, when: "11:00 - 14:30", what: "Vi drar ner hälften av jollarna till jolleplan, tvättar, lagar och ser över materialet. C55orna tvättas och poleras.", responsible: users.bjon },
+    { dayOfYear: 109, name: "Jolle: Vårbåtsfix", scope: "Jolle", boats: dinghies, label: "nssEvent", where: geosites.nyn_nhss_jollebod, when: "11:00 - 14:30", what: "Vi drar ner hälften av jollarna till jolleplan, tvättar, lagar och ser över materialet. C55-orna tvättas och poleras. Vi grillar korv tillsammans.", responsible: users.bjon },
     
     { dayOfYear: 120, name: "Kölbåt: H-båtsläger dag 1", scope: "Club", boats: ["H-båt"], label: "nssEvent" , where: geosites.nyn_nhss_klubbhus, what: "Uppstart av tävlingssäsongen: H-båts-träning med tränare.", when: "10:00 - 16:00", responsible: users.role},
     { dayOfYear: 121, name: "Kölbåt: H-båtsläger dag 2", scope: "Club", boats: ["H-båt"], label: "nssEvent" , where: geosites.nyn_nhss_klubbhus, what: "Uppstart av tävlingssäsongen: H-båts-träning med tränare.", when: "10:00 - 16:00", responsible: users.role},
     { dayOfYear: 122, name: "Kölbåt: H-båtsläger dag 3", scope: "Club", boats: ["H-båt"], label: "nssEvent" , where: geosites.nyn_nhss_klubbhus, what: "Uppstart av tävlingssäsongen: H-båts-träning med tränare.", when: "10:00 - 16:00", responsible: users.role},
     { dayOfYear: 123, name: "Kölbåt: H-båtsläger dag 4", scope: "Club", boats: ["H-båt"], label: "nssEvent" , where: geosites.nyn_nhss_klubbhus, what: "Uppstart av tävlingssäsongen: H-båts-träning med tränare.", when: "10:00 - 16:00", responsible: users.role},
     
-    { dayOfYear: 125, name: "Jolle: Teknikträning (prel)", scope: "Club", boats: dinghies, label: "nssEvent", when: "17:30 - 20:00", where: geosites.nyn_nhss_jollebod, what: "Teknikträning med coach för de mest avancerade jolleseglarna. Du bör ha kappseglingsvana för att klara av denna nivå. Klubben tillhandahåller Feva och Laser för denna träning, eller använd medhavd egen båt såsom exempelvis Laser, OK-jolle, Finnjolle eller E-jolle.", responsible: users.andh},
-    { dayOfYear: 132, name: "Jolle: Teknikträning (prel)", scope: "Club", boats: dinghies, label: "nssEvent", when: "17:30 - 20:00", where: geosites.nyn_nhss_jollebod, what: "Teknikträning med coach för de mest avancerade jolleseglarna. Du bör ha kappseglingsvana för att klara av denna nivå. Klubben tillhandahåller Feva och Laser för denna träning, eller använd medhavd egen båt såsom exempelvis Laser, OK-jolle, Finnjolle eller E-jolle.", responsible: users.andh},
-    { dayOfYear: 139, name: "Jolle: Teknikträning (prel)", scope: "Club", boats: dinghies, label: "nssEvent", when: "17:30 - 20:00", where: geosites.nyn_nhss_jollebod, what: "Teknikträning med coach för de mest avancerade jolleseglarna. Du bör ha kappseglingsvana för att klara av denna nivå. Klubben tillhandahåller Feva och Laser för denna träning, eller använd medhavd egen båt såsom exempelvis Laser, OK-jolle, Finnjolle eller E-jolle.", responsible: users.andh},
-    { dayOfYear: 146, name: "Jolle: Teknikträning (prel)", scope: "Club", boats: dinghies, label: "nssEvent", when: "17:30 - 20:00", where: geosites.nyn_nhss_jollebod, what: "Teknikträning med coach för de mest avancerade jolleseglarna. Du bör ha kappseglingsvana för att klara av denna nivå. Klubben tillhandahåller Feva och Laser för denna träning, eller använd medhavd egen båt såsom exempelvis Laser, OK-jolle, Finnjolle eller E-jolle.", responsible: users.andh},
+    { dayOfYear: 111, name: "Jolle: Teknikträning", scope: "Club", boats: dinghies, label: "nssEvent", when: "17:30 - 20:00", where: geosites.nyn_nhss_jollebod, what: "Teknikträning med coach för de mest avancerade jolleseglarna. Du bör ha kappseglingsvana för att klara av denna nivå. Klubben tillhandahåller Feva och Laser för denna träning, eller använd medhavd egen båt såsom exempelvis Laser, OK-jolle, Finnjolle eller E-jolle. Aprilsegling = Torrdräkt", responsible: users.andh},
+    { dayOfYear: 118, name: "Jolle: Teknikträning", scope: "Club", boats: dinghies, label: "nssEvent", when: "17:30 - 20:00", where: geosites.nyn_nhss_jollebod, what: "Teknikträning med coach för de mest avancerade jolleseglarna. Du bör ha kappseglingsvana för att klara av denna nivå. Klubben tillhandahåller Feva och Laser för denna träning, eller använd medhavd egen båt såsom exempelvis Laser, OK-jolle, Finnjolle eller E-jolle. Aprilsegling = Torrdräkt", responsible: users.andh},
+    { dayOfYear: 125, name: "Jolle: Teknikträning", scope: "Club", boats: dinghies, label: "nssEvent", when: "17:30 - 20:00", where: geosites.nyn_nhss_jollebod, what: "Teknikträning med coach för de mest avancerade jolleseglarna. Du bör ha kappseglingsvana för att klara av denna nivå. Klubben tillhandahåller Feva och Laser för denna träning, eller använd medhavd egen båt såsom exempelvis Laser, OK-jolle, Finnjolle eller E-jolle.", responsible: users.andh},
+    { dayOfYear: 132, name: "Jolle: Teknikträning", scope: "Club", boats: dinghies, label: "nssEvent", when: "17:30 - 20:00", where: geosites.nyn_nhss_jollebod, what: "Teknikträning med coach för de mest avancerade jolleseglarna. Du bör ha kappseglingsvana för att klara av denna nivå. Klubben tillhandahåller Feva och Laser för denna träning, eller använd medhavd egen båt såsom exempelvis Laser, OK-jolle, Finnjolle eller E-jolle.", responsible: users.andh},
+    { dayOfYear: 139, name: "Jolle: Teknikträning", scope: "Club", boats: dinghies, label: "nssEvent", when: "17:30 - 20:00", where: geosites.nyn_nhss_jollebod, what: "Teknikträning med coach för de mest avancerade jolleseglarna. Du bör ha kappseglingsvana för att klara av denna nivå. Klubben tillhandahåller Feva och Laser för denna träning, eller använd medhavd egen båt såsom exempelvis Laser, OK-jolle, Finnjolle eller E-jolle.", responsible: users.andh},
+    { dayOfYear: 146, name: "Jolle: Teknikträning", scope: "Club", boats: dinghies, label: "nssEvent", when: "17:30 - 20:00", where: geosites.nyn_nhss_jollebod, what: "Teknikträning med coach för de mest avancerade jolleseglarna. Du bör ha kappseglingsvana för att klara av denna nivå. Klubben tillhandahåller Feva och Laser för denna träning, eller använd medhavd egen båt såsom exempelvis Laser, OK-jolle, Finnjolle eller E-jolle.", responsible: users.andh},
     
     { dayOfYear: 123, name: "NSS: NSS-Dagen", scope: "Club", boats: [], label: "nssEvent", when: "11:00 - 14:00", where: geosites.nyn_nhss_klubbhus, what: "Marknad och NSS-händelser." , responsible: users.bjon},
     { dayOfYear: 123, name: "NSS: KM E-Segling (prel)", scope: "Club", boats: ["esegling"], label: "nssEvent", when: "11:00 - 14:00", where: geosites.nyn_nhss_klubbhus, what: "Klubbmästerskap i E-Segling", responsible: users.bjon},
@@ -208,8 +210,23 @@ let events = [
 
     { dayOfYear: 248, name: "Tävling: Viper Ocean Sprint Race, Dag 1", scope: "National", boats: ["Feva"], label: "nssEvent", where: geosites.nyn_nhss_jollebod, when: "08:00-16:00", what:"Nationell sprintcup för fevabesättningar. Nu har turen kommit till Nynäshamn. Vi arrangerar med följande uppställning: Tävlingsledare: Eskil, Seglingsledare: Björn, Dommare: Alfred, Funktionärer: Behövs! ", responsible: users.eskz },
     { dayOfYear: 249, name: "Tävling: Viper Ocean Sprint Race, Dag 2", scope: "National", boats: ["Feva"], label: "nssEvent", where: geosites.nyn_nhss_jollebod, when: "08:00-16:00", what:"Nationell sprintcup för fevabesättningar. Nu har turen kommit till Nynäshamn. Vi arrangerar med följande uppställning: Tävlingsledare: Eskil, Seglingsledare: Björn, Dommare: Alfred, Funktionärer: Behövs! ", responsible: users.eskz },
+    
+    { dayOfYear: 262, name: "Marstrand: Rock Ocean Sprint Race, Dag 1", scope: "National", boats: ["Feva"], label: "externalEvent", where: geosites.mar_jolle, when: "08:00-16:00", what:"Nationell sprintcup för fevabesättningar. Nu har turen kommit till Marsstrand." , responsible: users.eskz },
+    { dayOfYear: 263, name: "Marstrand: Rock Ocean Sprint Race, Dag 2", scope: "National", boats: ["Feva"], label: "externalEvent", where: geosites.mar_jolle, when: "08:00-16:00", what:"Nationell sprintcup för fevabesättningar. Nu har turen kommit till Marsstrand." , responsible: users.eskz },
+
 
     { dayOfYear: 281, name: "Jolle: Vinterfix Jolle - säsongsavslutning", scope: "Jolle", boats: dinghies, label: "nssEvent", responsible: users.bjon },
+   
+    { dayOfYear: 288, name: "Jolle: E-segling, Fys och Utbildning 1", scope: "Jolle", when: "18:00 - 20:00", where: geosites.nyn_nhss_klubbhus, what: "Eftersäsongsaktivitet med E-segling, fysträning och seglingsteori. (Prel)", boats: ["E-segling"], label: "nssEvent", responsible: users.bjon },
+    { dayOfYear: 295, name: "Jolle: E-segling, Fys och Utbildning 2", scope: "Jolle", when: "18:00 - 20:00", where: geosites.nyn_nhss_klubbhus, what: "Eftersäsongsaktivitet med E-segling, fysträning och seglingsteori. (Prel)", boats: ["E-segling"], label: "nssEvent", responsible: users.bjon },
+    { dayOfYear: 302, name: "Jolle: E-segling, Fys och Utbildning 3", scope: "Jolle", when: "18:00 - 20:00", where: geosites.nyn_nhss_klubbhus, what: "Eftersäsongsaktivitet med E-segling, fysträning och seglingsteori. (Prel)", boats: ["E-segling"], label: "nssEvent", responsible: users.bjon },
+    { dayOfYear: 309, name: "Jolle: E-segling, Fys och Utbildning 4", scope: "Jolle", when: "18:00 - 20:00", where: geosites.nyn_nhss_klubbhus, what: "Eftersäsongsaktivitet med E-segling, fysträning och seglingsteori. (Prel)", boats: ["E-segling"], label: "nssEvent", responsible: users.bjon },
+    { dayOfYear: 316, name: "Jolle: E-segling, Fys och Utbildning 5", scope: "Jolle", when: "18:00 - 20:00", where: geosites.nyn_nhss_klubbhus, what: "Eftersäsongsaktivitet med E-segling, fysträning och seglingsteori. (Prel)", boats: ["E-segling"], label: "nssEvent", responsible: users.bjon },
+    { dayOfYear: 323, name: "Jolle: E-segling, Fys och Utbildning 6", scope: "Jolle", when: "18:00 - 20:00", where: geosites.nyn_nhss_klubbhus, what: "Eftersäsongsaktivitet med E-segling, fysträning och seglingsteori. (Prel)", boats: ["E-segling"], label: "nssEvent", responsible: users.bjon },
+    { dayOfYear: 330, name: "Jolle: E-segling, Fys och Utbildning 7", scope: "Jolle", when: "18:00 - 20:00", where: geosites.nyn_nhss_klubbhus, what: "Eftersäsongsaktivitet med E-segling, fysträning och seglingsteori. (Prel)", boats: ["E-segling"], label: "nssEvent", responsible: users.bjon },
+    { dayOfYear: 337, name: "Jolle: E-segling, Fys och Utbildning 8", scope: "Jolle", when: "18:00 - 20:00", where: geosites.nyn_nhss_klubbhus, what: "Eftersäsongsaktivitet med E-segling, fysträning och seglingsteori. (Prel)", boats: ["E-segling"], label: "nssEvent", responsible: users.bjon },    
+    { dayOfYear: 344, name: "Jolle: E-segling, Fys och Utbildning 9", scope: "Jolle", when: "18:00 - 20:00", where: geosites.nyn_nhss_klubbhus, what: "Eftersäsongsaktivitet med E-segling, fysträning och seglingsteori. (Prel)", boats: ["E-segling"], label: "nssEvent", responsible: users.bjon },
+
 
 ]
 
@@ -271,7 +288,7 @@ function getEventById(events, id){
 }
 
 
-function makeModalParticipants(id){
+function makeModalParticipants(evId){
     let  partCountLine = document.getElementById('partCountLine')
     // Instantly update so that the user get feedback and don't click twice. 
     partCountLine.innerHTML = "<span id='partCountLineStatus'>...</span>"
@@ -281,7 +298,7 @@ function makeModalParticipants(id){
     participantCount.classList.add('participantCounter')
     partCountLine.appendChild(participantCount)
 
-    getRegistrationsForEvent(conn, id).then(
+    getRegistrationsForEvent(conn, evId).then(
         function(a){
             const yesCount = a.filter(b => b.willattend == true).length
             const noCount = a.filter(b => b.willattend != true).length
@@ -303,6 +320,17 @@ function makeModalParticipants(id){
                     let us = document.createElement("span")
                     us.classList.add("participantlabel")
                     us.innerHTML = k
+                    us.addEventListener("click", 
+                        function(evId, userId){
+                            return function(ev)
+                                {
+                                    if(confirm(`Ta bort användare ${userId} från denna aktivitet?`)){
+                                        registerForEvent(conn, evId, false, userId)
+                                        makeModalParticipants(evId)
+                                    }
+                                }
+                        }(evId, k)
+                    )
                     partCountLine.appendChild(us)
                 }
             }
@@ -312,6 +340,7 @@ function makeModalParticipants(id){
 } 
 
 
+
 function showEventModal(events, id){
     console.debug(`making modal for ${id}`)
     let evt = getEventById(events, id)
@@ -319,12 +348,23 @@ function showEventModal(events, id){
     let mc= document.getElementById("modal-content")
     mc.innerHTML = ""
     
-    let mtitle = document.createElement("h3")
+    let dateStruct = dateFromDOY(evt.dayOfYear)
+
+
+    let mtitle = document.createElement("h4")
     mtitle.innerHTML = evt.name
     mc.appendChild(mtitle)
 
+     let closesp = document.createElement("span")
+    closesp.addEventListener("click", function(evt){hideEventModal()})
+    closesp.innerHTML = "X"
+    closesp.classList.add("closebutton")
+    mc.appendChild(closesp)
+   
+
     let mwhere = document.createElement("p")
-    mwhere.innerHTML = `${evt.when} | ${evt.where.name} `
+    const isodate = isoStrOfDate(dateStruct[0],dateStruct[1],dateStruct[2])
+    mwhere.innerHTML = `${isodate} | ${evt.when} | ${evt.where.name} `
     mc.appendChild(mwhere)
 
     let mwho = document.createElement("p")
@@ -367,13 +407,7 @@ function showEventModal(events, id){
         makeModalParticipants(id)
     })
     attendbut.innerHTML = "Jag kommer"
-    butsp.appendChild(attendbut)
-
-
-    let okbut = document.createElement("button")
-    okbut.addEventListener("click", function(evt){hideEventModal()})
-    okbut.innerHTML = "Stäng"
-    butsp.appendChild(okbut)
+    butsp.appendChild(attendbut)   
 
     mc.appendChild(butsp)
 
@@ -385,6 +419,42 @@ function hideEventModal(){
     let m = document.getElementById("modal")
     m.classList.add("hidden")
 
+}
+
+
+function dateFromDOY(doy){
+    let yeardata = years[0] // 2026
+    let month = 0
+    let year = yeardata.year
+    let dayOfMonth = 0
+    for (let i = 0; i < doy; i++){
+        dayOfMonth++
+        if (dayOfMonth >= yeardata.monthlenghts[month]){
+            dayOfMonth = 0
+            month++
+        }
+    }
+    return [year, month, dayOfMonth]
+}
+
+
+function isoStrOfDate(year, month, dayOfMonth){
+    // zero based month
+    let monthstr = ""
+    let daystr = ""
+
+    if(month < 10){
+        monthstr = `0${month + 1}`
+    } else {
+        monthstr = `${month + 1}`
+    }
+
+    if(dayOfMonth < 10){
+        daystr = `0${dayOfMonth}`
+    } else {
+        daystr = `${dayOfMonth}`
+    }
+    return `${year}-${monthstr}-${daystr}`
 }
 
 
@@ -446,10 +516,12 @@ function makeDayBrick(dObj) {
         console.debug(`event ${i}/${dObj.events.length} --> id: ${evsp.id}, name: ${evsp.innerHTML}`)
         evsp.classList.add('event')
         evsp.classList.add(ev.label)
-        evsp.addEventListener("click", function(clickevent){
-            console.debug(clickevent)
-            showEventModal(dObj.events, ev.id)
-        })
+        evsp.addEventListener("click", function(events, evId){
+            return function(clickevent){
+                showEventModal(events, evId)
+                //console.debug(clickevent)
+            }
+        }(dObj.events, ev.id))
         eventsSpan.appendChild(evsp)
     }
     sp.appendChild(eventsSpan)
